@@ -1,0 +1,1304 @@
+{
+  "stage": "1013R_R48_FIELD_LEDGER_RECOVERY_AND_PAGE_REBIND",
+  "status": "field_authority_recovered_for_review",
+  "source_priority": [
+    {
+      "rank": 1,
+      "source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema\\big_unit_teacher_visible_field_model_1013I_R6N_R9A.json",
+      "role": "canonical_teacher_visible_field_source"
+    },
+    {
+      "rank": 2,
+      "source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6N_R9A_field_label_disambiguation_before_runtime_schema\\big_unit_backend_field_mapping_1013I_R6N_R9A.json",
+      "role": "canonical_backend_reuse_mapping"
+    },
+    {
+      "rank": 3,
+      "source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013I_R6O_big_unit_field_model_to_page_render_fixture\\big_unit_field_render_manifest_1013I_R6O.json",
+      "role": "historical_page_render_mapping"
+    },
+    {
+      "rank": 4,
+      "source": "outputs\\field_scheme_0956F\\review_workspace_preview_0956F.json",
+      "role": "legacy_field_governance_and_alias_source"
+    },
+    {
+      "rank": 5,
+      "source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+      "role": "current_page_and_edit_binding_target"
+    }
+  ],
+  "boundary_flags": {
+    "do_not_rollback_r21": true,
+    "do_not_create_new_page": true,
+    "do_not_modify_r36": true,
+    "provider_model_call_allowed": false,
+    "runtime_integration_allowed": false,
+    "database_write_allowed": false,
+    "feishu_write_allowed": false,
+    "memory_write_allowed": false,
+    "formal_apply_allowed": false,
+    "preview_only": true,
+    "r25_r29_registry_is_field_standard": false,
+    "r45_r47_edit_card_bridge_is_field_standard": false
+  },
+  "canonical_field_count": 12,
+  "legacy_field_count": 18,
+  "fields": [
+    {
+      "field_key": "unit_basic_info",
+      "canonical_label": "单元信息",
+      "legacy_aliases": [
+        "unit_info",
+        "unit_theme"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "unit_theme"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "teacher_self_prep_request",
+        "textbook_anchor_fixture_1013I_R6D",
+        "textbook_anchor_candidates_1013I_R6E",
+        "school_calendar_resource"
+      ],
+      "backend_targets": [
+        "unit_package.unit_title",
+        "lesson_sequence"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.unit",
+        "lesson.code",
+        "lesson.title"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "单元信息",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "unit_info",
+        "current_page_title": "单元信息",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "unit_info",
+        "current_edit_title": "单元信息",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "unit_basic_info",
+          "explicit_alias_of": "unit_basic_info",
+          "current_alias": "unit_info"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "curriculum_basis",
+      "canonical_label": "课标依据",
+      "legacy_aliases": [],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "curriculum_standard_control_layer_1013I_R6C",
+        "teacher_supplied_curriculum_ref"
+      ],
+      "backend_targets": [
+        "curriculum_standard_control_layer.standard_ref",
+        "unit_package.source_material_refs"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.basis",
+        "lesson.objectives"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "课标依据",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface_with_right_reference_detail",
+        "current_page_edit_id": "curriculum_basis",
+        "current_page_title": "课标依据",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "curriculum_basis",
+        "current_edit_title": "课标依据",
+        "binding_status": "rendered",
+        "requires_canonical_field_key": false,
+        "required_patch": null,
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "source_evidence",
+            "label": "资料来源与依据",
+            "intent": "inspect_source_and_missing_materials",
+            "route_decision": "right_panel_source_and_material_request"
+          },
+          {
+            "tool_id": "teacher_confirm",
+            "label": "教师确认门",
+            "intent": "confirm_before_formal_package_or_export",
+            "route_decision": "top_right_action_gate"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "rendered",
+      "action": "keep"
+    },
+    {
+      "field_key": "core_literacy_goals",
+      "canonical_label": "核心素养",
+      "legacy_aliases": [
+        "core_literacy",
+        "big_idea",
+        "unit_learning_goal"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "big_idea",
+          "unit_learning_goal"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "curriculum_standard_control_layer_1013I_R6C",
+        "unit_learning_goals",
+        "official_unit_field_dictionary_v1"
+      ],
+      "backend_targets": [
+        "unit_package.unit_learning_goals"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.objectives",
+        "lesson.assessment_focus"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "核心素养",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "core_literacy",
+        "current_page_title": "核心素养",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "core_literacy",
+        "current_edit_title": "核心素养",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "core_literacy_goals",
+          "explicit_alias_of": "core_literacy_goals",
+          "current_alias": "core_literacy"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "student_starting_point",
+      "canonical_label": "学生起点",
+      "legacy_aliases": [
+        "student_start",
+        "student_context"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "student_context"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "teacher_input",
+        "student_work_samples_future",
+        "classroom_feedback_future",
+        "official_unit_field_dictionary_v1.学情分析"
+      ],
+      "backend_targets": [
+        "unit_package.source_material_refs",
+        "future_student_context_pack"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.student_analysis"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "学生起点",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "student_start",
+        "current_page_title": "学生起点",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "student_start",
+        "current_edit_title": "学生起点",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "student_starting_point",
+          "explicit_alias_of": "student_starting_point",
+          "current_alias": "student_start"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "source_evidence",
+            "label": "资料来源与依据",
+            "intent": "inspect_source_and_missing_materials",
+            "route_decision": "right_panel_source_and_material_request"
+          },
+          {
+            "tool_id": "teacher_confirm",
+            "label": "教师确认门",
+            "intent": "confirm_before_formal_package_or_export",
+            "route_decision": "top_right_action_gate"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "unit_questions",
+      "canonical_label": "单元问题",
+      "legacy_aliases": [
+        "big_idea",
+        "essential_question",
+        "guiding_question"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "big_idea",
+          "essential_question",
+          "guiding_question"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "unit_package.unit_essential_question",
+        "official_unit_field_dictionary_v1.基本问题",
+        "teacher_input"
+      ],
+      "backend_targets": [
+        "unit_package.unit_essential_question"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.guiding_question",
+        "lesson.teaching_process_question_chain"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "单元问题",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "unit_questions",
+        "current_page_title": "单元问题",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "unit_questions",
+        "current_edit_title": "单元问题",
+        "binding_status": "rendered",
+        "requires_canonical_field_key": false,
+        "required_patch": null,
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "rendered",
+      "action": "keep"
+    },
+    {
+      "field_key": "knowledge_and_skills",
+      "canonical_label": "知识与技能",
+      "legacy_aliases": [
+        "knowledge_skills",
+        "unit_learning_goal"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "unit_learning_goal"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "curriculum_standard_control_layer_1013I_R6C",
+        "official_unit_field_dictionary_v1",
+        "teacher_materials"
+      ],
+      "backend_targets": [
+        "unit_package.unit_learning_goals",
+        "future_unit_skill_targets"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.objectives",
+        "lesson.materials",
+        "lesson.teaching_process"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "知识与技能",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "knowledge_skills",
+        "current_page_title": "知识与技能",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "knowledge_skills",
+        "current_edit_title": "知识与技能",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "knowledge_and_skills",
+          "explicit_alias_of": "knowledge_and_skills",
+          "current_alias": "knowledge_skills"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "performance_task",
+      "canonical_label": "表现任务",
+      "legacy_aliases": [
+        "performance_task"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "performance_task"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "unit_package.unit_performance_task",
+        "official_unit_field_dictionary_v1.单元表现性任务",
+        "teacher_input"
+      ],
+      "backend_targets": [
+        "unit_package.unit_performance_task"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.performance_task",
+        "lesson.assessment_focus"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "表现任务",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "performance_task",
+        "current_page_title": "表现任务",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "performance_task",
+        "current_edit_title": "表现任务",
+        "binding_status": "rendered",
+        "requires_canonical_field_key": false,
+        "required_patch": null,
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "evaluation_form",
+            "label": "评价表",
+            "intent": "generate_or_preview_assessment_form",
+            "route_decision": "right_panel_evaluation_preview_required"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "rendered",
+      "action": "keep"
+    },
+    {
+      "field_key": "learning_progression",
+      "canonical_label": "学习推进",
+      "legacy_aliases": [
+        "learning_stage"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "learning_stage"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "unit_package.unit_task_chain",
+        "big_unit_chain_candidates_1013I_R6E",
+        "official_unit_field_dictionary_v1.学习阶段"
+      ],
+      "backend_targets": [
+        "unit_package.unit_task_chain"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.teaching_process",
+        "lesson.flow"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "学习推进",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface_light_timeline",
+        "current_page_edit_id": "learning_progression",
+        "current_page_title": "学习推进",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "learning_progression",
+        "current_edit_title": "学习推进",
+        "binding_status": "rendered",
+        "requires_canonical_field_key": false,
+        "required_patch": null,
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "courseware",
+            "label": "课件",
+            "intent": "generate_or_preview_courseware",
+            "route_decision": "right_panel_courseware_draft_and_preview"
+          },
+          {
+            "tool_id": "display_screen",
+            "label": "大屏",
+            "intent": "generate_or_preview_classroom_display",
+            "route_decision": "right_panel_display_draft_and_preview"
+          },
+          {
+            "tool_id": "xiaojiao_entry",
+            "label": "小教入口",
+            "intent": "route_teacher_intent_to_field_candidate",
+            "route_decision": "composer_to_existing_edit_card_not_blue_standalone_card"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "rendered",
+      "action": "keep"
+    },
+    {
+      "field_key": "lesson_task_chain",
+      "canonical_label": "课时任务链",
+      "legacy_aliases": [
+        "lesson_chain",
+        "learning_task",
+        "guiding_question",
+        "learning_activity"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "learning_task",
+          "guiding_question",
+          "learning_activity"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "unit_package.lesson_sequence",
+        "lesson_position_judgement_fixture_1013I_R6D",
+        "big_unit_chain_candidates_1013I_R6E"
+      ],
+      "backend_targets": [
+        "unit_package.lesson_sequence",
+        "lesson_position_judgement"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.unit_position_badge",
+        "lesson.prior_lesson_connection",
+        "lesson.next_lesson_connection",
+        "lesson.current_lesson_unit_task"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "课时任务链",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface_expandable",
+        "current_page_edit_id": "lesson_chain",
+        "current_page_title": "课时任务链",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "lesson_chain",
+        "current_edit_title": "课时任务链",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "lesson_task_chain",
+          "explicit_alias_of": "lesson_task_chain",
+          "current_alias": "lesson_chain"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "courseware",
+            "label": "课件",
+            "intent": "generate_or_preview_courseware",
+            "route_decision": "right_panel_courseware_draft_and_preview"
+          },
+          {
+            "tool_id": "display_screen",
+            "label": "大屏",
+            "intent": "generate_or_preview_classroom_display",
+            "route_decision": "right_panel_display_draft_and_preview"
+          },
+          {
+            "tool_id": "learning_sheet",
+            "label": "学习单",
+            "intent": "generate_or_preview_learning_sheet",
+            "route_decision": "right_panel_derivative_draft"
+          },
+          {
+            "tool_id": "evaluation_form",
+            "label": "评价表",
+            "intent": "generate_or_preview_assessment_form",
+            "route_decision": "right_panel_evaluation_preview_required"
+          },
+          {
+            "tool_id": "xiaojiao_entry",
+            "label": "小教入口",
+            "intent": "route_teacher_intent_to_field_candidate",
+            "route_decision": "composer_to_existing_edit_card_not_blue_standalone_card"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "assessment_evidence",
+      "canonical_label": "评价证据",
+      "legacy_aliases": [
+        "task_assessment_points",
+        "learning_assessment",
+        "assessment_scaffold"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "task_assessment_points",
+          "learning_assessment",
+          "assessment_scaffold"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "unit_package.unit_assessment_focus",
+        "unit_package.unit_learning_evidence_chain",
+        "official_unit_field_dictionary_v1.学习评价"
+      ],
+      "backend_targets": [
+        "unit_package.unit_assessment_focus",
+        "unit_package.unit_learning_evidence_chain"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.assessment_focus",
+        "lesson.right_panel.how_to_reach"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "评价证据",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "assessment_evidence",
+        "current_page_title": "评价证据",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "assessment_evidence",
+        "current_edit_title": "评价证据",
+        "binding_status": "rendered",
+        "requires_canonical_field_key": false,
+        "required_patch": null,
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "learning_sheet",
+            "label": "学习单",
+            "intent": "generate_or_preview_learning_sheet",
+            "route_decision": "right_panel_derivative_draft"
+          },
+          {
+            "tool_id": "evaluation_form",
+            "label": "评价表",
+            "intent": "generate_or_preview_assessment_form",
+            "route_decision": "right_panel_evaluation_preview_required"
+          },
+          {
+            "tool_id": "source_evidence",
+            "label": "资料来源与依据",
+            "intent": "inspect_source_and_missing_materials",
+            "route_decision": "right_panel_source_and_material_request"
+          },
+          {
+            "tool_id": "teacher_confirm",
+            "label": "教师确认门",
+            "intent": "confirm_before_formal_package_or_export",
+            "route_decision": "top_right_action_gate"
+          },
+          {
+            "tool_id": "xiaojiao_entry",
+            "label": "小教入口",
+            "intent": "route_teacher_intent_to_field_candidate",
+            "route_decision": "composer_to_existing_edit_card_not_blue_standalone_card"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "rendered",
+      "action": "keep"
+    },
+    {
+      "field_key": "skills_materials_scaffolds",
+      "canonical_label": "材料与支架",
+      "legacy_aliases": [
+        "materials_and_scaffolds",
+        "materials_scaffolds",
+        "context_scaffold",
+        "task_scaffold",
+        "resource_scaffold",
+        "strategy_scaffold",
+        "learning_sheet",
+        "assessment_scaffold"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "context_scaffold",
+          "task_scaffold",
+          "resource_scaffold",
+          "strategy_scaffold",
+          "learning_sheet",
+          "assessment_scaffold"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "official_unit_field_dictionary_v1.资源支架",
+        "teacher_materials",
+        "lesson.materials"
+      ],
+      "backend_targets": [
+        "future_unit_scaffold_pack",
+        "unit_package.source_material_refs"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.materials",
+        "lesson.teaching_process_support"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "材料与支架",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "main_reading_surface",
+        "current_page_edit_id": "materials_scaffolds",
+        "current_page_title": "材料与支架",
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": "materials_scaffolds",
+        "current_edit_title": "材料与支架",
+        "binding_status": "renamed",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "skills_materials_scaffolds",
+          "explicit_alias_of": "skills_materials_scaffolds",
+          "current_alias": "materials_scaffolds"
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "courseware",
+            "label": "课件",
+            "intent": "generate_or_preview_courseware",
+            "route_decision": "right_panel_courseware_draft_and_preview"
+          },
+          {
+            "tool_id": "display_screen",
+            "label": "大屏",
+            "intent": "generate_or_preview_classroom_display",
+            "route_decision": "right_panel_display_draft_and_preview"
+          },
+          {
+            "tool_id": "learning_sheet",
+            "label": "学习单",
+            "intent": "generate_or_preview_learning_sheet",
+            "route_decision": "right_panel_derivative_draft"
+          },
+          {
+            "tool_id": "source_evidence",
+            "label": "资料来源与依据",
+            "intent": "inspect_source_and_missing_materials",
+            "route_decision": "right_panel_source_and_material_request"
+          },
+          {
+            "tool_id": "xiaojiao_entry",
+            "label": "小教入口",
+            "intent": "route_teacher_intent_to_field_candidate",
+            "route_decision": "composer_to_existing_edit_card_not_blue_standalone_card"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "renamed",
+      "action": "rebind"
+    },
+    {
+      "field_key": "material_requests",
+      "canonical_label": "资料补充",
+      "legacy_aliases": [
+        "learning_sheet"
+      ],
+      "source_stage": "1013I_R6N_R9A",
+      "governance_source": {
+        "stage": "0956",
+        "legacy_field_keys": [
+          "learning_sheet"
+        ],
+        "policy_role": "legacy_alias_governance_source_not_page_standard"
+      },
+      "source_candidates": [
+        "R6D_missing_anchor_status",
+        "R6E_teacher_confirmation_required_items",
+        "teacher_input"
+      ],
+      "backend_targets": [
+        "teacher_confirmation_required_items",
+        "source_material_refs"
+      ],
+      "single_lesson_inheritance_targets": [
+        "lesson.material_request_prompt"
+      ],
+      "render_slot": {
+        "r6o_rendered": true,
+        "r6o_teacher_label": "资料补充",
+        "r6o_main_surface_candidate": true,
+        "render_layer": "frontloaded_prompt_and_main_reading_surface",
+        "current_page_edit_id": null,
+        "current_page_title": null,
+        "page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html"
+      },
+      "edit_card_binding": {
+        "current_edit_id": null,
+        "current_edit_title": null,
+        "binding_status": "missing",
+        "requires_canonical_field_key": true,
+        "required_patch": {
+          "canonical_field_key": "material_requests",
+          "explicit_alias_of": null,
+          "current_alias": null
+        },
+        "existing_edit_card_bridge": {
+          "stage": "1013R_R45_R47",
+          "status": "PASS_AS_EDIT_CARD_BRIDGE_ONLY",
+          "not_field_standard": true
+        }
+      },
+      "tool_intent_binding": {
+        "bindings": [
+          {
+            "tool_id": "prep_notebook",
+            "label": "备课本",
+            "intent": "open_lesson_or_unit_prep_book",
+            "route_decision": "left_catalog_to_current_lesson_with_field_context"
+          },
+          {
+            "tool_id": "big_unit",
+            "label": "大单元",
+            "intent": "open_big_unit_design_context",
+            "route_decision": "left_catalog_unit_scope_not_flow_relation"
+          },
+          {
+            "tool_id": "courseware",
+            "label": "课件",
+            "intent": "generate_or_preview_courseware",
+            "route_decision": "right_panel_courseware_draft_and_preview"
+          },
+          {
+            "tool_id": "display_screen",
+            "label": "大屏",
+            "intent": "generate_or_preview_classroom_display",
+            "route_decision": "right_panel_display_draft_and_preview"
+          },
+          {
+            "tool_id": "learning_sheet",
+            "label": "学习单",
+            "intent": "generate_or_preview_learning_sheet",
+            "route_decision": "right_panel_derivative_draft"
+          },
+          {
+            "tool_id": "source_evidence",
+            "label": "资料来源与依据",
+            "intent": "inspect_source_and_missing_materials",
+            "route_decision": "right_panel_source_and_material_request"
+          },
+          {
+            "tool_id": "teacher_confirm",
+            "label": "教师确认门",
+            "intent": "confirm_before_formal_package_or_export",
+            "route_decision": "top_right_action_gate"
+          },
+          {
+            "tool_id": "xiaojiao_entry",
+            "label": "小教入口",
+            "intent": "route_teacher_intent_to_field_candidate",
+            "route_decision": "composer_to_existing_edit_card_not_blue_standalone_card"
+          }
+        ],
+        "formal_apply_allowed": false,
+        "provider_model_call_allowed": false,
+        "preview_only": true
+      },
+      "current_page_status": "missing",
+      "action": "rebind"
+    }
+  ],
+  "legacy_field_mapping": [
+    {
+      "legacy_field_key": "student_context",
+      "label": "学情分析",
+      "teacher_label": "学生现在什么基础",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "student_starting_point"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "unit_theme",
+      "label": "单元主题",
+      "teacher_label": "这个单元围绕什么学",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "unit_basic_info"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "big_idea",
+      "label": "大观念",
+      "teacher_label": "这个单元最终想让学生明白什么",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "unit_questions",
+        "core_literacy_goals"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "essential_question",
+      "label": "基本问题",
+      "teacher_label": "用什么大问题带着学生学",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "unit_questions"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "unit_learning_goal",
+      "label": "单元学习目标",
+      "teacher_label": "学完学生会什么、懂什么、能表达什么",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "core_literacy_goals",
+        "knowledge_and_skills"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "performance_task",
+      "label": "单元表现性任务",
+      "teacher_label": "学生最后要完成什么作品 / 展示 / 项目",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "performance_task"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "task_assessment_points",
+      "label": "单元任务评估要点",
+      "teacher_label": "怎么判断学生完成得好不好",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "assessment_evidence"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "learning_stage",
+      "label": "学习阶段",
+      "teacher_label": "单元推进到哪一步",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "learning_progression"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "learning_task",
+      "label": "学习任务",
+      "teacher_label": "每一步学生要完成什么",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "lesson_task_chain"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "guiding_question",
+      "label": "小问题",
+      "teacher_label": "这一阶段用什么问题引导学生思考",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "unit_questions",
+        "lesson_task_chain"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "learning_activity",
+      "label": "学习活动",
+      "teacher_label": "课堂上具体做什么",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "lesson_task_chain"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "learning_assessment",
+      "label": "学习评价",
+      "teacher_label": "这一阶段怎么看学生学得怎么样",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "assessment_evidence"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "context_scaffold",
+      "label": "情境支架",
+      "teacher_label": "这节课用什么情境把学生带进去",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "skills_materials_scaffolds"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "task_scaffold",
+      "label": "任务支架",
+      "teacher_label": "学生完成任务时需要哪些步骤提示",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "skills_materials_scaffolds"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "resource_scaffold",
+      "label": "资源支架",
+      "teacher_label": "学生需要看什么、用什么材料或资源",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "skills_materials_scaffolds"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "strategy_scaffold",
+      "label": "策略支架",
+      "teacher_label": "学生遇到困难时，老师给什么方法",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "skills_materials_scaffolds"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "learning_sheet",
+      "label": "学习单",
+      "teacher_label": "学生需要填写或记录什么",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "skills_materials_scaffolds",
+        "material_requests"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    },
+    {
+      "legacy_field_key": "assessment_scaffold",
+      "label": "评价支架",
+      "teacher_label": "学生怎么知道自己做得怎么样",
+      "field_purpose": null,
+      "target_canonical_fields": [
+        "assessment_evidence",
+        "skills_materials_scaffolds"
+      ],
+      "mapping_role": "legacy_alias_or_inner_slot"
+    }
+  ]
+}

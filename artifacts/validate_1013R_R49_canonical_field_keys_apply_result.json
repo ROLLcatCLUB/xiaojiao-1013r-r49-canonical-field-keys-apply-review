@@ -1,0 +1,29 @@
+{
+  "stage": "1013R_R49_CANONICAL_FIELD_KEYS_APPLY_TO_CURRENT_PAGE_COPY",
+  "status": "PASS",
+  "errors": [],
+  "summary": {
+    "page_edit_item_count": 12,
+    "canonical_field_count": 12,
+    "alias_count": 6,
+    "material_requests_present": true,
+    "material_prompt_marker_present": true,
+    "fallback_patch_count": 6,
+    "missing_canonical_raw_patch_rejected": true,
+    "normalized_patch_count_after_probe": 3,
+    "r21_html": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+    "r45_r47_backend": "backend\\xiaobei_ai\\prep_room_in_page_model_quality_loop_1013R_R45_R47.py"
+  },
+  "boundary": {
+    "do_not_rollback_r21": true,
+    "do_not_create_new_page": true,
+    "do_not_modify_r36": true,
+    "provider_model_call_allowed": false,
+    "runtime_integration_allowed": false,
+    "database_write_allowed": false,
+    "feishu_write_allowed": false,
+    "memory_write_allowed": false,
+    "formal_apply_allowed": false,
+    "standalone_blue_card_allowed": false
+  }
+}

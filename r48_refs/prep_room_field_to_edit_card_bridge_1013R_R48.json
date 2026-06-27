@@ -1,0 +1,180 @@
+{
+  "stage": "1013R_R48_FIELD_LEDGER_RECOVERY_AND_PAGE_REBIND",
+  "boundary_flags": {
+    "do_not_rollback_r21": true,
+    "do_not_create_new_page": true,
+    "do_not_modify_r36": true,
+    "provider_model_call_allowed": false,
+    "runtime_integration_allowed": false,
+    "database_write_allowed": false,
+    "feishu_write_allowed": false,
+    "memory_write_allowed": false,
+    "formal_apply_allowed": false,
+    "preview_only": true,
+    "r25_r29_registry_is_field_standard": false,
+    "r45_r47_edit_card_bridge_is_field_standard": false
+  },
+  "current_page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+  "r45_r47_source": "backend\\xiaobei_ai\\prep_room_in_page_model_quality_loop_1013R_R45_R47.py",
+  "r45_r47_patch_candidate_policy": {
+    "status": "bridge_only_not_field_standard",
+    "requires_canonical_field_key": true,
+    "required_candidate_fields": [
+      "canonical_field_key",
+      "target_field_key",
+      "explicit_alias_of",
+      "target_section",
+      "target_step_id",
+      "target_field"
+    ],
+    "allowed_destination": "existing_edit_card_before_after_suggestion_panel",
+    "forbidden_destination": "new_standalone_blue_generation_card_on_page_body",
+    "formal_apply_allowed": false
+  },
+  "bindings": [
+    {
+      "field_key": "unit_basic_info",
+      "canonical_label": "单元信息",
+      "current_page_edit_id": "unit_info",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "unit_basic_info",
+        "explicit_alias_of": "unit_basic_info",
+        "current_alias": "unit_info"
+      }
+    },
+    {
+      "field_key": "curriculum_basis",
+      "canonical_label": "课标依据",
+      "current_page_edit_id": "curriculum_basis",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "required_patch": null
+    },
+    {
+      "field_key": "core_literacy_goals",
+      "canonical_label": "核心素养",
+      "current_page_edit_id": "core_literacy",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "core_literacy_goals",
+        "explicit_alias_of": "core_literacy_goals",
+        "current_alias": "core_literacy"
+      }
+    },
+    {
+      "field_key": "student_starting_point",
+      "canonical_label": "学生起点",
+      "current_page_edit_id": "student_start",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "student_starting_point",
+        "explicit_alias_of": "student_starting_point",
+        "current_alias": "student_start"
+      }
+    },
+    {
+      "field_key": "unit_questions",
+      "canonical_label": "单元问题",
+      "current_page_edit_id": "unit_questions",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "required_patch": null
+    },
+    {
+      "field_key": "knowledge_and_skills",
+      "canonical_label": "知识与技能",
+      "current_page_edit_id": "knowledge_skills",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "knowledge_and_skills",
+        "explicit_alias_of": "knowledge_and_skills",
+        "current_alias": "knowledge_skills"
+      }
+    },
+    {
+      "field_key": "performance_task",
+      "canonical_label": "表现任务",
+      "current_page_edit_id": "performance_task",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "required_patch": null
+    },
+    {
+      "field_key": "learning_progression",
+      "canonical_label": "学习推进",
+      "current_page_edit_id": "learning_progression",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "required_patch": null
+    },
+    {
+      "field_key": "lesson_task_chain",
+      "canonical_label": "课时任务链",
+      "current_page_edit_id": "lesson_chain",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "lesson_task_chain",
+        "explicit_alias_of": "lesson_task_chain",
+        "current_alias": "lesson_chain"
+      }
+    },
+    {
+      "field_key": "assessment_evidence",
+      "canonical_label": "评价证据",
+      "current_page_edit_id": "assessment_evidence",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "required_patch": null
+    },
+    {
+      "field_key": "skills_materials_scaffolds",
+      "canonical_label": "材料与支架",
+      "current_page_edit_id": "materials_scaffolds",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "skills_materials_scaffolds",
+        "explicit_alias_of": "skills_materials_scaffolds",
+        "current_alias": "materials_scaffolds"
+      }
+    },
+    {
+      "field_key": "material_requests",
+      "canonical_label": "资料补充",
+      "current_page_edit_id": null,
+      "current_page_status": "missing",
+      "action": "rebind",
+      "required_patch": {
+        "canonical_field_key": "material_requests",
+        "explicit_alias_of": null,
+        "current_alias": null
+      }
+    }
+  ],
+  "field_patch_candidate_targeting_examples": [
+    {
+      "r45_r47_target_section": "teaching_process",
+      "canonical_field_key": "lesson_task_chain",
+      "target_field_key": "lesson_task_chain",
+      "reason": "single lesson process patches must land inside the lesson task chain / teaching process field context"
+    },
+    {
+      "r45_r47_target_field": "teacher_action",
+      "canonical_field_key": "learning_progression",
+      "target_field_key": "learning_progression",
+      "reason": "teacher action wording is a step-level refinement under learning progression"
+    },
+    {
+      "r45_r47_target_field": "assessment_or_evidence",
+      "canonical_field_key": "assessment_evidence",
+      "target_field_key": "assessment_evidence",
+      "reason": "evaluation candidates must bind to assessment evidence before preview or export"
+    }
+  ]
+}

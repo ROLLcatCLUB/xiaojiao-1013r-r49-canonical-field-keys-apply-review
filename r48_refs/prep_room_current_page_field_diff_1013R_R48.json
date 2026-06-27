@@ -1,0 +1,183 @@
+{
+  "stage": "1013R_R48_FIELD_LEDGER_RECOVERY_AND_PAGE_REBIND",
+  "boundary_flags": {
+    "do_not_rollback_r21": true,
+    "do_not_create_new_page": true,
+    "do_not_modify_r36": true,
+    "provider_model_call_allowed": false,
+    "runtime_integration_allowed": false,
+    "database_write_allowed": false,
+    "feishu_write_allowed": false,
+    "memory_write_allowed": false,
+    "formal_apply_allowed": false,
+    "preview_only": true,
+    "r25_r29_registry_is_field_standard": false,
+    "r45_r47_edit_card_bridge_is_field_standard": false
+  },
+  "current_page_source": "outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R21_page_copy_binds_unified_package\\prep_room_page_copy_binds_unified_package_1013R_R21.html",
+  "current_page_edit_item_count": 11,
+  "canonical_field_count": 12,
+  "summary": {
+    "rendered": [
+      "curriculum_basis",
+      "unit_questions",
+      "performance_task",
+      "learning_progression",
+      "assessment_evidence"
+    ],
+    "renamed": [
+      "unit_basic_info",
+      "core_literacy_goals",
+      "student_starting_point",
+      "knowledge_and_skills",
+      "lesson_task_chain",
+      "skills_materials_scaffolds"
+    ],
+    "missing": [
+      "material_requests"
+    ],
+    "orphan_ui": [],
+    "legacy_unmapped": []
+  },
+  "current_page_items": [
+    {
+      "current_page_edit_id": "unit_info",
+      "canonical_field_key": "unit_basic_info",
+      "canonical_label": "单元信息",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "unit_basic_info"
+    },
+    {
+      "current_page_edit_id": "curriculum_basis",
+      "canonical_field_key": "curriculum_basis",
+      "canonical_label": "课标依据",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "explicit_alias_of": null
+    },
+    {
+      "current_page_edit_id": "core_literacy",
+      "canonical_field_key": "core_literacy_goals",
+      "canonical_label": "核心素养",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "core_literacy_goals"
+    },
+    {
+      "current_page_edit_id": "student_start",
+      "canonical_field_key": "student_starting_point",
+      "canonical_label": "学生起点",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "student_starting_point"
+    },
+    {
+      "current_page_edit_id": "unit_questions",
+      "canonical_field_key": "unit_questions",
+      "canonical_label": "单元问题",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "explicit_alias_of": null
+    },
+    {
+      "current_page_edit_id": "knowledge_skills",
+      "canonical_field_key": "knowledge_and_skills",
+      "canonical_label": "知识与技能",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "knowledge_and_skills"
+    },
+    {
+      "current_page_edit_id": "performance_task",
+      "canonical_field_key": "performance_task",
+      "canonical_label": "表现任务",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "explicit_alias_of": null
+    },
+    {
+      "current_page_edit_id": "learning_progression",
+      "canonical_field_key": "learning_progression",
+      "canonical_label": "学习推进",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "explicit_alias_of": null
+    },
+    {
+      "current_page_edit_id": "lesson_chain",
+      "canonical_field_key": "lesson_task_chain",
+      "canonical_label": "课时任务链",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "lesson_task_chain"
+    },
+    {
+      "current_page_edit_id": "assessment_evidence",
+      "canonical_field_key": "assessment_evidence",
+      "canonical_label": "评价证据",
+      "current_page_status": "rendered",
+      "action": "keep",
+      "explicit_alias_of": null
+    },
+    {
+      "current_page_edit_id": "materials_scaffolds",
+      "canonical_field_key": "skills_materials_scaffolds",
+      "canonical_label": "材料与支架",
+      "current_page_status": "renamed",
+      "action": "rebind",
+      "explicit_alias_of": "skills_materials_scaffolds"
+    },
+    {
+      "current_page_edit_id": null,
+      "canonical_field_key": "material_requests",
+      "canonical_label": "资料补充",
+      "current_page_status": "missing",
+      "action": "rebind",
+      "explicit_alias_of": null
+    }
+  ],
+  "renamed_or_alias_bindings": [
+    {
+      "field_key": "unit_basic_info",
+      "current_page_edit_id": "unit_info",
+      "canonical_label": "单元信息",
+      "action": "rebind"
+    },
+    {
+      "field_key": "core_literacy_goals",
+      "current_page_edit_id": "core_literacy",
+      "canonical_label": "核心素养",
+      "action": "rebind"
+    },
+    {
+      "field_key": "student_starting_point",
+      "current_page_edit_id": "student_start",
+      "canonical_label": "学生起点",
+      "action": "rebind"
+    },
+    {
+      "field_key": "knowledge_and_skills",
+      "current_page_edit_id": "knowledge_skills",
+      "canonical_label": "知识与技能",
+      "action": "rebind"
+    },
+    {
+      "field_key": "lesson_task_chain",
+      "current_page_edit_id": "lesson_chain",
+      "canonical_label": "课时任务链",
+      "action": "rebind"
+    },
+    {
+      "field_key": "skills_materials_scaffolds",
+      "current_page_edit_id": "materials_scaffolds",
+      "canonical_label": "材料与支架",
+      "action": "rebind"
+    }
+  ],
+  "missing_canonical_fields": [
+    "material_requests"
+  ],
+  "orphan_ui": [],
+  "decision": "keep_current_page_rebind_field_authority"
+}
